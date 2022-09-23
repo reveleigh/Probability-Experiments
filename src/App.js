@@ -34,7 +34,7 @@ function App() {
                 Heads or tails
               </h1>
               <svg
-                className="w-6"
+                className="w-6 align-middle"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -49,35 +49,95 @@ function App() {
               </svg>
             </div>
             <div className="flex p-4 justify-center gap-4">
-              <div className="border-b-4 border-red-400 rounded p-1 flex-grow text-center">
+              <div className="border-b-4 border-red-600 rounded p-1 flex-grow text-center bg-red-100">
                 Heads: 12
               </div>
-              <div className="border-b-4 border-orange-400 rounded p-1 flex-grow text-center">
+              <div className="border-b-4 border-amber-600 rounded p-1 flex-grow text-center bg-amber-100">
                 Tails: 12
               </div>
-              <div className="border-b-4 border-gray-400 rounded p-1 flex-grow text-center">
+              <div className="border-b-4 border-gray-600 rounded p-1 flex-grow text-center bg-gray-100">
                 Total: 24
               </div>
             </div>
             <div className="p-4 text-center">
               Heads proportion
-              <div className="text-4xl text-center text-red-400">0.512733763</div>
+              <div className="text-4xl text-center text-red-600">
+                0.512733763
+              </div>
             </div>
             <div className="p-4 text-center">
               Tails proportion
-              <div className="text-4xl text-center text-orange-400">0.482629716</div>
+              <div className="text-4xl text-center text-amber-600">
+                0.482629716
+              </div>
             </div>
             <div className="flex justify-center p-4">
-            <div className="py-2 px-8 text-center text-4xl border-4 rounded-full">
-              Flip
-            </div>
+              <div className="py-2 px-8 text-center text-2xl border-4 border-gray-600 bg-gray-100 rounded-full w-24 h-24 flex justify-center items-center">
+                <div className="flex">FLIP</div>
+              </div>
             </div>
           </div>
           <main className="px-16 py-6 bg-gray-100 md:col-span-2 justify-between h-screen">
             <h1 className="uppercase font-bold text-2xl border-b text-center">
               Results
             </h1>
-            here is some text
+
+            <div className="py-4 flex gap-2 flex-wrap justify-center">
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-amber-100 border-4 border-amber-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-amber-300">T</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+              <div className="h-24 bg-red-100 border-4 border-red-600 rounded-full w-24 flex items-center justify-center text-6xl">
+                <div className="flex text-red-300">H</div>
+              </div>
+            </div>
           </main>
         </div>
       </div>
