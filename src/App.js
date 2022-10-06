@@ -1,9 +1,9 @@
 function App() {
   return (
     <div className="App">
-      <div className="text-gray-600 font-body bg-white">
+      <div className="text-gray-600 font-body bg-gray-100">
         <div className="grid md:grid-cols-3">
-          <div className="md:col-span-1 md:flex flex-col md:justify-start">
+          <div className="md:col-span-1 md:flex flex-col md:justify-start bg-white">
             <nav className="text-right">
               <div className="flex justify-end items-center">
                 <h1 className="font-bold uppercase p-4 md:border-b">
