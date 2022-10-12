@@ -15,13 +15,13 @@ const CoinStats = (props) => {
             <div className="p-4 text-center">
             Heads proportion
             <div className="text-4xl text-center text-red-600">
-              {(props.heads / (props.heads + props.tails)).toFixed(5)}
+              {props.pHeads}
             </div>
           </div>
           <div className="p-4 text-center">
             Tails proportion
             <div className="text-4xl text-center text-amber-600">
-            {(props.tails / (props.heads + props.tails)).toFixed(5)}
+            {props.pTails}
             </div>
           </div>
         </div>
