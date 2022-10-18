@@ -1,15 +1,29 @@
+import React, {useState } from 'react';
 import Controls from "./components/Layout/Controls";
 import Results from "./components/Layout/Results";
 
+
+
+
 function App() {
+  const[coins, setCoins] = useState([]);
+
+  const addCoinHandler = (coin) => {
+    setCoins((prevCoins) => {
+      return [coin, ...prevCoins];
+    });
+    console.log(coins)
+
+};
+
   return (
     <div className="App">
       <div className="text-gray-600 font-body bg-gray-100">
         <div className="grid md:grid-cols-3">
 
-          <Controls />
+          <Controls onAddCoin={addCoinHandler}/>
 
-          <Results />
+          <Results coins={coins}/>
           
           
         </div>

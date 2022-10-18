@@ -16,15 +16,16 @@ const Controls = (props) => {
     
     const flipCoin = () => {
         const coin = Math.floor(Math.random() * 2);
+          
         if (coin === 0) {
             setHeads(heads + 1);         
         } else {
             setTails(tails + 1);
-        }      
+        }
+        props.onAddCoin(coin);   
     };
 
     useEffect(() => {
-
         if (heads + tails > 0) {
             setPHeads((heads / (heads + tails)).toFixed(5));
             setPTails((tails / (heads + tails)).toFixed(5));
@@ -41,9 +42,7 @@ const Controls = (props) => {
             <CoinStats heads={heads} tails={tails} pTails={PTails} pHeads={PHeads}/>
 
             <CoinFlip flip={flipCoin} />
-            
-            
-           
+                 
           </div>
 
     );
