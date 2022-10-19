@@ -7,13 +7,10 @@ import Results from "./components/Layout/Results";
 
 function App() {
   const[coins, setCoins] = useState([]);
-
   const addCoinHandler = (coin) => {
     setCoins((prevCoins) => {
       return [coin, ...prevCoins];
     });
-    console.log(coins)
-
 };
 
   return (
