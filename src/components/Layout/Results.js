@@ -1,6 +1,6 @@
 const Results = (props) => {
   return (
-    <main className="px-16 py-6 bg-gray-100 md:col-span-2 justify-between h-screen">
+    <main className="px-16 py-6 bg-gray-100 md:col-span-2 justify-between h-screen overflow-scroll">
       <h1 className="select-none uppercase font-bold text-2xl border-b text-center">
         Results
       </h1>
