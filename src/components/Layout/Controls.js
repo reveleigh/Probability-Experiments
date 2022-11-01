@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import Title from "./Title";
 import CoinStats from "../CoinToss/CoinStats";
 import CoinFlip from "../CoinToss/CoinFlip";
+import Modal from './Modal';
 
 const Controls = (props) => {
 
@@ -10,13 +11,18 @@ const Controls = (props) => {
     const [tails, setTails] = useState(0);
     const [PHeads, setPHeads] = useState((0).toFixed(5));
     const [PTails, setPTails] = useState((0).toFixed(5));
+    const [info, setInfo] = useState(false);
+
+    //Funtion to display modal
+    const infoHandler = () => {
+        setInfo(true);
+    };
 
 
     //function to flip coin
     
     const flipCoin = () => {
-        const coin = Math.floor(Math.random() * 2);
-          
+        const coin = Math.floor(Math.random() * 2);      
         if (coin === 0) {
             setHeads(heads + 1);         
         } else {
@@ -34,10 +40,11 @@ const Controls = (props) => {
 
     return(
         <div className="md:col-span-1 md:flex flex-col md:justify-start bg-white">
+        {info && <Modal />}
             
             <Navigation />
 
-            <Title />
+            <Title info={infoHandler}/>
 
             <CoinStats heads={heads} tails={tails} pTails={PTails} pHeads={PHeads}/>
 

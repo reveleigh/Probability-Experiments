@@ -4,7 +4,7 @@ const Total = (props) => {
               <h1 className="uppercase font-bold text-4xl text-center">
                 Heads or tails
               </h1>
-              <svg
+              <svg onClick={props.info}
                 className="w-6 align-middle"
                 fill="none"
                 viewBox="0 0 24 24"

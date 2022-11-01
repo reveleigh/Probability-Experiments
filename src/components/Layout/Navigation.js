@@ -8,7 +8,7 @@ const Navigation = (props) => {
                   </a>
                 </h1>
                 <div className="px-4 cursor-pointer md:hidden">
-                  <svg
+                  <svg 
                     className="w-6"
                     fill="none"
                     viewBox="0 0 24 24"
