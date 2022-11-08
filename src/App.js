@@ -12,6 +12,9 @@ function App() {
       return [coin, ...prevCoins];
     });
 };
+const clearCoinsHandler = () => {
+  setCoins([]);
+};
 
   return (
     <div className="App">
@@ -19,7 +22,7 @@ function App() {
 
         <div className="grid md:grid-cols-3">
 
-          <Controls onAddCoin={addCoinHandler}/>
+          <Controls onAddCoin={addCoinHandler} onReset ={clearCoinsHandler}/>
 
           <Results coins={coins}/>
           

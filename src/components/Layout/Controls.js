@@ -15,7 +15,7 @@ const Controls = (props) => {
 
     //Funtion to display modal
     const infoHandler = () => {
-        setInfo(true);
+        setInfo(!info);
     };
 
 
@@ -31,6 +31,14 @@ const Controls = (props) => {
         props.onAddCoin(coin);   
     };
 
+    const reset = () => {
+        setHeads(0);
+        setTails(0);
+        setPHeads((0).toFixed(5));
+        setPTails((0).toFixed(5));
+        props.onReset();
+    };
+
     useEffect(() => {
         if (heads + tails > 0) {
             setPHeads((heads / (heads + tails)).toFixed(5));
@@ -40,7 +48,7 @@ const Controls = (props) => {
 
     return(
         <div className="md:col-span-1 md:flex flex-col md:justify-start bg-white">
-        {info && <Modal />}
+        {info && <Modal info={infoHandler}/>}
             
             <Navigation />
 
@@ -48,7 +56,7 @@ const Controls = (props) => {
 
             <CoinStats heads={heads} tails={tails} pTails={PTails} pHeads={PHeads}/>
 
-            <CoinFlip flip={flipCoin} />
+            <CoinFlip flip={flipCoin} reset={reset}/>
                  
           </div>
 

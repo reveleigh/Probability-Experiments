@@ -12,7 +12,7 @@ const CoinStats = (props) => {
                 Total: {props.heads + props.tails}
               </div>
             </div>
-            <div className="p-4 text-center ">
+            <div className="p-4 text-center select-none">
             Heads proportion
             <div className="text-4xl text-center text-red-600 select-none">
               {props.pHeads}
