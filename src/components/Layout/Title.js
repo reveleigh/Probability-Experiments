@@ -1,8 +1,8 @@
-const Total = (props) => {
+const Title = (props) => {
     return(
         <div className="text-center p-4 flex gap-2 justify-center">
               <h1 className="uppercase font-bold text-4xl text-center">
-                Heads or tails
+                {props.title}
               </h1>
               <svg onClick={props.info}
                 className="w-6 align-middle"
@@ -22,4 +22,4 @@ const Total = (props) => {
     );
 };
 
-export default Total;
+export default Title;

@@ -8,13 +8,12 @@ const Modal = (props) => {
     <div>
       <div className={backdrop} onClick={props.info}></div>
       <div className={modal}>
-        <h1 className="text-4xl border-b-2">Heads or Tails</h1>
+        <h1 className="text-4xl border-b-2">{props.title}</h1>
         <p className="pt-4">
-          When a coin is tossed, there are only two possible outcomes so the
-          probability formula is as follows:
+          {props.description}
         </p>
-        <p className="pt-4 text-center text-2xl">P(Head) = P(H) = 1/2</p>
-        <p className="pt-4 text-center text-2xl">P(Tail) = P(T) = 1/2</p>
+        <p className="pt-4 text-center text-2xl">{props.formula}</p>
+        <p className="pt-4 text-center text-2xl">{props.formula2}</p>
         <div className="flex justify-center p-4">
             <div className={close} onClick={props.info}>OK</div>
         </div>
