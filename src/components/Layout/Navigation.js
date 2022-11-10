@@ -1,13 +1,16 @@
+import Menu from "./Menu";
 const Navigation = (props) => {
+
+
     return(
         <nav className="text-right">
-              <div className="flex justify-end items-center">
-                <h1 className="font-bold uppercase p-4 md:border-b">
+              <div className="flex justify-end items-center md:border-b">
+                <h1 className="font-bold uppercase p-4">
                   <a className="hover:text-gray-700" href="/">
                     Probability Experiments
                   </a>
                 </h1>
-                <div className="px-4 cursor-pointer md:hidden">
+                <div className="px-4 cursor-pointer p-4">
                   <svg 
                     className="w-6"
                     fill="none"
@@ -26,6 +29,7 @@ const Navigation = (props) => {
 
                 </div>
               </div>
+              <Menu />
             </nav>
 
     );
