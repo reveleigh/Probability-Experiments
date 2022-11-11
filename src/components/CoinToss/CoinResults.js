@@ -7,7 +7,7 @@ const CoinResults = (props) => {
         Results
       </h1>
 
-      <div className="py-4 flex gap-2 flex-wrap select-none">
+      {props.coin && (<div className="py-4 flex gap-2 flex-wrap select-none">
         {props.coins.map((coins, index) => (
           <div
             key={index}
@@ -16,7 +16,7 @@ const CoinResults = (props) => {
             <div className={coins===0?"flex select-none text-red-300":"flex text-amber-300"}>{coins === 0 ? "H" : "T"}</div>
           </div>
         ))}
-      </div>
+      </div>)}
     </main>
   );
 };

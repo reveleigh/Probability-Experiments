@@ -16,9 +16,9 @@ const Coin = (props) => {
   return (
     <div className="text-gray-600 font-body bg-gray-100">
       <div className="grid md:grid-cols-3">
-        <CoinControls onAddCoin={addCoinHandler} onReset={clearCoinsHandler} title="Heads or Tails"/>
+        <CoinControls coin={props.coin} setCoin={props.setCoin} onAddCoin={addCoinHandler} onReset={clearCoinsHandler} title="Heads or Tails"/>
 
-        <CoinResults coins={coins} />
+        <CoinResults coins={coins} coin={props.coin} />
       </div>
     </div>
   );

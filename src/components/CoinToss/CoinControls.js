@@ -62,13 +62,18 @@ const CoinControls = (props) => {
         />
       )}
 
-      <Navigation />
-
-      <Title info={infoHandler} title={props.title} />
-
-      <CoinStats heads={heads} tails={tails} pTails={PTails} pHeads={PHeads} />
-
-      <CoinFlip flip={flipCoin} reset={reset} />
+      <Navigation setCoin={props.setCoin}/>
+      {props.coin && (<div>
+        
+        <Title info={infoHandler} title={props.title} />
+        <CoinStats
+          heads={heads}
+          tails={tails}
+          pTails={PTails}
+          pHeads={PHeads}
+        />
+        <CoinFlip flip={flipCoin} reset={reset} />
+      </div>)}
     </div>
   );
 };
