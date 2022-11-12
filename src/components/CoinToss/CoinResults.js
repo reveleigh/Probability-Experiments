@@ -7,7 +7,7 @@ const CoinResults = (props) => {
         Results
       </h1>
 
-      {props.coin && (<div className="py-4 flex gap-2 flex-wrap select-none">
+      {props.showCoin && (<div className="py-4 flex gap-2 flex-wrap select-none">
         {props.coins.map((coins, index) => (
           <div
             key={index}
