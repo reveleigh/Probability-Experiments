@@ -1,9 +1,9 @@
-import Coin from "./components/CoinToss/Coin";
+import Experiments from "./components/Experiments";
 
 function App() {
   return (
     <div className="App">
-      <Coin />
+      <Experiments />
     </div>
   );
 }

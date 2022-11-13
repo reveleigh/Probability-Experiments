@@ -1,12 +1,8 @@
-import React, { useState } from "react";
 import Menu from "./Menu";
 
-const Navigation = (props) => {
-  const [subMenu, setSubMenu] = useState(false);
 
-  const subMenuHandler = () => {
-    setSubMenu(!subMenu);
-  };
+const Navigation = (props) => {
+  
 
   return (
     <nav className="text-right">
@@ -16,10 +12,10 @@ const Navigation = (props) => {
             Probability Experiments
           </a>
         </h1>
-        <div className="px-4 cursor-pointer p-4">
+        <div className="px-4 cursor-pointer p-4 relative">
           <svg
-            onClick={subMenuHandler}
-            className="w-6"
+            onClick={props.showSubMenu}
+            className="w-6 data-dropdown-toggle='dropdownId'"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
@@ -29,14 +25,19 @@ const Navigation = (props) => {
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           </svg>
         </div>
+        
+      
       </div>
-      {subMenu && <Menu subMenu={subMenuHandler} setCoin={props.setCoin} />}
-    </nav>
+      
+      {props.subMenu && <Menu className="relative" subMenu={props.subMenu} setCoin={props.setCoin} />}
+    </nav> 
   );
 };
 
 export default Navigation;
+
+

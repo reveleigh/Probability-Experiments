@@ -62,7 +62,7 @@ const CoinControls = (props) => {
         />
       )}
 
-      <Navigation setCoin={props.setCoin}/>
+      <Navigation setCoin={props.setCoin} showSubMenu={props.showSubMenu} subMenu={props.subMenu}/> 
       {props.showCoin && (<div>
         
         <Title info={infoHandler} title={props.title} />
