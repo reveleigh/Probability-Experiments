@@ -11,6 +11,7 @@ const Title = (props) => {
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
+                cursor="pointer"
               >
                 <path
                   stroke-linecap="round"
